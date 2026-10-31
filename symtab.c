@@ -95,6 +95,11 @@ static DataType evaluate_expr(ASTNode *expr) {
                 semantic_errors++;
                 return TYPE_ERROR;
             }
+            /* Check if variable was used before initialization */
+            if (!sym->is_init) {
+                printf("Semantic Error at line %d: variable '%s' used before initialization\n", expr->line_no, expr->name);
+                semantic_errors++;
+            }
             return sym->type;
         }
 
