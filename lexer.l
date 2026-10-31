@@ -81,11 +81,7 @@ BAD_NUM_ID  ({DIGIT}+|{FLOAT_NUM}){LETTER}({LETTER}|{DIGIT}|".")*
 
  /* 8. Multi-Character Operators */
 "=="                                    { return EQ; }
-"!="                                    { return NEQ; }
-"<="                                    { return LE; }
-">="                                    { return GE; }
-"&&"                                    { return AND; }
-"||"                                    { return OR; }
+
 
  /* 9. Single-Character Operators and Punctuation */
 "+"|"-"|"*"|"/"|"%"|"="|"<"|">"|"!"|"("|")"|"{"|"}"|";"|"," {

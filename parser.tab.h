@@ -54,13 +54,7 @@
      STRING_LIT = 270,
      BOOL_LIT = 271,
      EQ = 272,
-     NEQ = 273,
-     LE = 274,
-     GE = 275,
-     AND = 276,
-     OR = 277,
-     UMINUS = 278,
-     LOWER_THAN_ELSE = 279
+     LOWER_THAN_ELSE = 273
    };
 #endif
 
@@ -71,7 +65,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 36 "parser.y"
+#line 31 "parser.y"
 
     int ival;
     float fval;
@@ -82,7 +76,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 86 "parser.tab.h"
+#line 80 "parser.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

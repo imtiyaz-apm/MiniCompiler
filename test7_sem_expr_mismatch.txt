@@ -3,7 +3,6 @@ int a = 10;
 float b = 5.5;
 int res = a + b;
 int mod_err = b % a;
-bool log_err = a && true;
 
 if (a) {
     print(a);
