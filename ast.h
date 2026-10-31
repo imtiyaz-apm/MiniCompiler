@@ -15,13 +15,12 @@ typedef enum {
     TYPE_ERROR
 } DataType;
 
-/* AST Node Categories */
+/* Simplified AST Node Categories (No Unary Ops) */
 typedef enum {
     NODE_BLOCK,
     NODE_DECL,
     NODE_ASSIGN,
     NODE_BINARY_OP,
-    NODE_UNARY_OP,
     NODE_IF,
     NODE_DO_WHILE,
     NODE_PRINT,
@@ -36,24 +35,22 @@ typedef enum {
 typedef struct ASTNode {
     NodeType node_type;
     DataType data_type;
-    int line_no;                /* Line number for error reporting */
+    int line_no;
 
-    char *name;                 /* Identifier name (for Decl / Var / Assign) */
-    char *op;                   /* Operator symbol (e.g., "+", "==", "&&") */
+    char *name;
+    char *op;
 
-    /* Literal values */
     int int_val;
     float float_val;
     char *str_val;
     int bool_val;
 
-    /* Child pointers for trees and statement lists */
-    struct ASTNode *left;       /* Left operand or initialization expression */
-    struct ASTNode *right;      /* Right operand */
-    struct ASTNode *cond;       /* Condition for if / do-while */
-    struct ASTNode *body;       /* Main block for if / do-while / BlockNode */
-    struct ASTNode *else_body;  /* Else block for IfNode */
-    struct ASTNode *next;       /* Next statement in a sequence */
+    struct ASTNode *left;
+    struct ASTNode *right;
+    struct ASTNode *cond;
+    struct ASTNode *body;
+    struct ASTNode *else_body;
+    struct ASTNode *next;
 } ASTNode;
 
 /* AST Constructor Prototypes */
@@ -61,7 +58,6 @@ ASTNode* create_node(NodeType type, int line);
 ASTNode* create_decl_node(DataType type, char *name, ASTNode *init_expr, int line);
 ASTNode* create_assign_node(char *name, ASTNode *expr, int line);
 ASTNode* create_binary_op_node(char *op, ASTNode *left, ASTNode *right, int line);
-ASTNode* create_unary_op_node(char *op, ASTNode *operand, int line);
 ASTNode* create_if_node(ASTNode *cond, ASTNode *then_branch, ASTNode *else_branch, int line);
 ASTNode* create_dowhile_node(ASTNode *body, ASTNode *cond, int line);
 ASTNode* create_print_node(ASTNode *expr, int line);
