@@ -1,0 +1,4 @@
+// Part D(d): Assignment type mismatch
+int x = 10;
+x = "hello";
+bool flag = 123;

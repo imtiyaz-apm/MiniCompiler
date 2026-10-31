@@ -1,0 +1,18 @@
+set BISON_PKGDATADIR=C:\PROGRA~2\GnuWin32\share\bison
+
+bison -d parser.y
+flex lexer.l
+gcc parser.tab.c lex.yy.c ast.c symtab.c 
+
+
+
+a.exe test1_valid_basic.txt
+a.exe test2_valid_control_scope.txt
+a.exe test3_lexical_errors.txt
+a.exe test4_syntax_errors.txt
+a.exe test5_sem_undeclared.txt
+a.exe test6_sem_duplicate.txt
+a.exe test7_sem_expr_mismatch.txt
+a.exe test8_sem_assign_mismatch.txt
+a.exe test9_sem_scope_violation.txt
+a.exe test10_sem_uninitialized.txt

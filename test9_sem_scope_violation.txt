@@ -1,0 +1,7 @@
+// Part D(e): Accessing a variable outside its declared block scope
+int outer = 5;
+if (outer > 0) {
+    int inner = 20;
+    print(inner);
+}
+print(inner);

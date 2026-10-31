@@ -1,0 +1,5 @@
+// Testing malformed numbers, illegal characters, and unterminated strings
+float bad_float = 12.3.4;
+int 12abc = 50;
+int x = 10 @ 5;
+string broken = "unterminated string literal

@@ -1,0 +1,9 @@
+// Valid basic program testing declarations and expressions
+int a = 10;
+int b = 20;
+int sum = a + b * 2;
+float pi = 3.14;
+string msg = "Compiler Lab Project";
+bool is_valid = (sum > 30) && true;
+print(sum);
+print(msg);

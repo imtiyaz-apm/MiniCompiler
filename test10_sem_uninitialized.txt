@@ -1,0 +1,4 @@
+// Part D(f): Using a declared variable before initialization
+int uninit_var;
+int total = uninit_var + 10;
+print(total);

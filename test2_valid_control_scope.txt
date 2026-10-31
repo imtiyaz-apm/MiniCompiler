@@ -1,0 +1,15 @@
+/* Valid program testing if-else, do-while, and nested block scopes */
+int count = 0;
+int limit = 3;
+
+do {
+    int step = 1;
+    count = count + step;
+} while (count < limit);
+
+if (count == limit) {
+    string status = "Done";
+    print(status);
+} else {
+    print(count);
+}

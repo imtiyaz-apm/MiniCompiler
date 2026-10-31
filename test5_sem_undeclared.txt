@@ -1,0 +1,4 @@
+// Part D(a): Undeclared variable usage
+int a = 10;
+int b = a + x;
+z = 50;
