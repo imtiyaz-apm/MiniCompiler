@@ -1,0 +1,3 @@
+// Test program: print your name
+string name = "Imtiyaz Ali";
+print name;
